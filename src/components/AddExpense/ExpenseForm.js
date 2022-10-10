@@ -2,7 +2,7 @@ import React from "react";
 import "./ExpenseForm.css";
 import { useState } from 'react';
 
-const ExpenseForm = () => {
+const ExpenseForm = (props) => {
     const [newName, changeName] = useState('');
     const [newPrice, modPrice] = useState('');
     const [newDate, alterDate] = useState('');
@@ -31,7 +31,9 @@ const ExpenseForm = () => {
         date: new Date(newDate)
       };
 
-      console.log(formData);
+      //passing data up through props, going to ExpenseItem
+      props.onSaveExpense(formData);
+    
       //clears form
       changeName('');
       modPrice('');

@@ -2,11 +2,19 @@ import React from 'react';
 import './NewExpense.css';
 import ExpenseForm from './ExpenseForm';
 
-const NewExpense = () => {
-
+const NewExpense = (props) => {
+    //handler that takes data from state handlers and plugs data into
+    const saveExpenseHandler = (enteredData) => {
+        const expenseData = {
+            ...enteredData,
+            id: Math.random().toString()
+        };
+        props.onAddExpense(expenseData);
+        console.log("new expense")
+    };
     return(
         <div className='new-expense'>
-            <ExpenseForm />
+            <ExpenseForm onSaveExpense={saveExpenseHandler}/>
         </div>
     );
 };
