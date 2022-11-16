@@ -1,6 +1,5 @@
-import React from "react";
-import "./ExpenseForm.css";
-import { useState } from 'react';
+import React, { useState } from 'react';
+import './ExpenseForm.css';
 
 const ExpenseForm = (props) => {
     const [newName, changeName] = useState('');
