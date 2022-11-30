@@ -35,6 +35,8 @@ const dummy_data = [
 function App() {
   const [expenses, setExpenses] = useState(dummy_data);
   
+  //addExpenseHandler argument coming from Expenses.js
+  //prevExpenses argument coming automatically from JS
   const addExpenseHandler = (expense) => {
     setExpenses((prevExpenses) => {
       return [expense, ...prevExpenses]
