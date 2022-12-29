@@ -10,9 +10,9 @@ const Expenses = function (props) {
   const [year, changeYear] = useState();
 
    const yearHandler = dataYear => {
-      changeYear(dataYear);
-      console.log("datayear " + dataYear)
-      console.log(year + " JS")
+       changeYear(dataYear);
+     // console.log("datayear " + dataYear)
+     /// console.log(year + " JS")
     };
 
     const showExpenses = props.items.filter(expense => {
@@ -25,7 +25,7 @@ const Expenses = function (props) {
       <div>
         <Card className="expenses">
           <ExpensesFilter selected={year} onChangeFilter={yearHandler} />
-          <ExpensesList expenses={year} />
+          <ExpensesList items={showExpenses} />
           </Card>
           </div>
        );
