@@ -34,9 +34,10 @@ const dummy_data = [
 
 function App() {
   const [expenses, setExpenses] = useState(dummy_data);
- // console.log(expenses + "Expenses, should be the same as New.js13")
+ // console.log(expenses + "Expenses")
   //addExpenseHandler argument coming from newExpense.js
   //prevExpenses argument coming automatically from JS
+  //adding expense to a list
   const addExpenseHandler = (expense) => {
     setExpenses(
       (prevExpenses) => {

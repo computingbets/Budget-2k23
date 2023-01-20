@@ -30,7 +30,7 @@ const ExpenseForm = (props) => {
         date: new Date(newDate)
       };
 
-      //passing data up through props, going to ExpenseItem
+      //passing data through props, going to ExpenseItem
       props.onSaveExpense(formData);
     
       //clears form

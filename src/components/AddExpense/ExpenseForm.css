@@ -24,3 +24,20 @@
   .new-expense__actions {
     text-align: right;
   }
+
+  .expense_landing {
+    background-color: #a892ee;
+    padding: 1rem;
+    margin: 2rem auto;
+    width: 50rem;
+    max-width: 95%;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
+  }
+
+  .expense_button {
+    width: 3rem;
+    background-color: #40005d;
+    height: 10pxpx;
+  }
