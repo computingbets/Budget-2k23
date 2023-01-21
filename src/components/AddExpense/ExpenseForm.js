@@ -31,7 +31,7 @@ const ExpenseForm = (props) => {
       };
 
       //passing data through props, going to ExpenseItem
-      props.onSaveExpense(formData);
+      props.onSaveExpenseData(formData);
     
       //clears form
       changeName('');
