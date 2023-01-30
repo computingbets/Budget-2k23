@@ -1,6 +1,6 @@
 // import ExpenseItem from "./components/ExpenseItem";
 
-import NewExpense from "./components/AddExpense/NewExpense";
+import NewExpense from "./components/NewExpense/NewExpense";
 import Expenses from "./components/Expenses/Expenses";
 import React, { useState } from 'react';
 
@@ -9,14 +9,14 @@ const dummy_data = [
     id: "e1",
     title: "Dope Soap",
     amount: 10.61,
-    date: new Date(20, 4, 4),
+    date: new Date(2021, 4, 4),
   },
-  { id: "e2", title: "Rent", amount: 7777, date: new Date(2022, 9, 31 )},
+  { id: "e2", title: "Rent", amount: 7777, date: new Date(2022, 11, 31 )},
   {
     id: "e3",
     title: "Bandcamp stuff",
     amount: 15,
-    date: new Date(2022, 8, 21),
+    date: new Date(2020, 8, 21),
   },
   {
     id: "e4",
@@ -28,7 +28,7 @@ const dummy_data = [
     id: "e5",
     title: "Monthly Vaping",
     amount: 140,
-    date: new Date(2022, 9, 12)
+    date: new Date(2022, 12, 12)
   }
 ];
 

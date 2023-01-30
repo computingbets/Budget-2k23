@@ -1,17 +1,25 @@
-import React from "react";
 
-import "./Chart.css";
+import React from 'react';
+
 import ChartBar from './ChartBar';
+import './Chart.css';
 
 const Chart = (props) => {
-    // takes props and maps it into jsx component
-    return <div className="Chart">
-    {props.spendingData.map(finData => <ChartBar 
-    value={finData.value}
-    maxValue={null} 
-    metric={finData.metric}
-    id={finData.metric} />)}
+  const dataPointValues = props.dataPoints.map(dataPoint => dataPoint.value);
+  const totalMaximum = Math.max(...dataPointValues);
+
+  return (
+    <div className='chart'>
+      {props.dataPoints.map((dataPoint) => (
+        <ChartBar
+          key={dataPoint.label}
+          value={dataPoint.value}
+          maxValue={totalMaximum}
+          label={dataPoint.label}
+        />
+      ))}
     </div>
+  );
 };
 
 export default Chart;

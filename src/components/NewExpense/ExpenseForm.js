@@ -26,7 +26,7 @@ const ExpenseForm = (props) => {
       //store state vars, after handler from either price, date, or title fires, in obj
       const formData = {
         title: newName,
-        amount: newPrice,
+        amount: +newPrice,
         date: new Date(newDate)
       };
 

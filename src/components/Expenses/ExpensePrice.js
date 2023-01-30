@@ -7,7 +7,7 @@ return (
           ${props.amount}
     </div>
     <div>
-        BTC: {props.amount/16600}
+        BTC: {props.amount/23900}
     </div>
 </div>
     );
