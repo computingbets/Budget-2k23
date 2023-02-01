@@ -1,8 +1,7 @@
-// import ExpenseItem from "./components/ExpenseItem";
+import React, { useState } from 'react';
 
 import NewExpense from "./components/NewExpense/NewExpense";
 import Expenses from "./components/Expenses/Expenses";
-import React, { useState } from 'react';
 
 const dummy_data = [
   {
@@ -32,22 +31,19 @@ const dummy_data = [
   }
 ];
 
-function App() {
+function App(){
   const [expenses, setExpenses] = useState(dummy_data);
- // console.log(expenses + "Expenses")
   //addExpenseHandler argument coming from newExpense.js
   //prevExpenses argument coming automatically from JS
   //adding expense to a list
   const addExpenseHandler = (expense) => {
-    setExpenses(
-      (prevExpenses) => {
+    setExpenses((prevExpenses) => {
       return [expense, ...prevExpenses]
     });
   };
 
   return (
     <div>
-      <h2>Let's chill!</h2>
       <NewExpense onAddExpense={addExpenseHandler} />
       <Expenses items={expenses} />
     </div>
